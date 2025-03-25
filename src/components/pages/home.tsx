@@ -207,7 +207,7 @@ function Home() {
 
 
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300 ${isLoaded ? 'translate-y-0' : 'translate-y-4'}`}>
-          {filteredBlogs??.map((blog) => (
+          {filteredBlogs?.map((blog) => (
             <Card
               key={blog.id}
               className="transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg bg-white dark:bg-gray-800 rounded-lg overflow-hidden"
