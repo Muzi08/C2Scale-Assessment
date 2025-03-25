@@ -44,7 +44,7 @@ function Home() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('https://c2scale-assessment.onrender.com/api/posts');
         setBlogs(response.data);
         setIsLoaded(true);
       } catch (error) {
@@ -62,7 +62,7 @@ function Home() {
     if (!topic) return;
     setIsGenerating(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/posts', { topic });
+      const response = await axios.post('https://c2scale-assessment.onrender.com/api/posts', { topic });
       setBlogs([response.data, ...blogs]);
       toast.success("Blog has been generated");
     } catch (error) {
@@ -76,7 +76,7 @@ function Home() {
 
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`);
+      await axios.delete(`https://c2scale-assessment.onrender.com/api/posts/${id}`);
       setBlogs(blogs.filter(blog => blog.id !== id));
       toast.success("Blog has been deleted");
     } catch (error) {
