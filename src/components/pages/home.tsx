@@ -42,8 +42,8 @@ function Home() {
   const navigate = useNavigate();
 
 
-  // let URL = "https://c2scale-assessment.onrender.com"
-  let URL = "http://localhost:5000"
+  let URL = "https://c2scale-assessment.onrender.com"
+  // let URL = "http://localhost:5000"
 
   useEffect(() => {
     const fetchBlogs = async () => {
