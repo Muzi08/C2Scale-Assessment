@@ -45,7 +45,7 @@ const mockpost = [
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://c2-scale-assessment.vercel.app/"],
+    origin: ["http://localhost:5173", "https://c2-scale-assessment.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization", "token", "toastId"],
     credentials: true,
